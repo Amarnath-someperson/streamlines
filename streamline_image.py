@@ -49,7 +49,7 @@ def circle():
                     # pressure_field[(x, y)] = (PRESSURE_SURFACE- (PRESSURE_CHANGE_X * (center_x -x)), PRESSURE_SURFACE-(PRESSURE_CHANGE_Y * (center_y-y)))
                     pressure_field[((x, y))] = (0, int(255/10000 * math.sqrt((PRESSURE_SURFACE - (PRESSURE_CHANGE_X * (math.cos(angle) * (center_x-x_dist))))**2 + (PRESSURE_SURFACE - (PRESSURE_CHANGE_Y * (math.sin(angle) * (center_y-y_dist))))**2)), 0)
                 else:
-                    pressure_field[((x, y))] = (0, int(255/10000 * (PRESSURE_SURFACE - (PRESSURE_CHANGE_Y * (center_y-y_dist)))), 0)
+                    pressure_field[((x, y))] = (0, int(255/10000 * (PRESSURE_SURFACE - (PRESSURE_CHANGE_Y * (center_y-y)))), 0)
                 
         
     # TODO: Greatly improve efficiency
